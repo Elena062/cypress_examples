@@ -2,8 +2,8 @@ describe('Автотест_покупка аватара', function () {
 
     it('покупка аватара и немного самодеятельности)', function () {
          cy.visit('https://pokemonbattle.ru/');                                        //Зайти на сайт
-         cy.get(':nth-child(1) > .auth__input').type('lenka-penka81@list.ru');         //Ввести логин
-         cy.get('#password').type('Testtr21');                                         //Ввести пароль
+         cy.get(':nth-child(1) > .auth__input').type('USER_LOGIN');         //Ввести логин
+         cy.get('#password').type('USER_PASSWORD');                                         //Ввести пароль
          cy.get('#password').should('have.attr', 'type', 'password');                  //Проверить, что символы пароля заменены звёздочками
          cy.get('.auth__input-icon').should('be.visible');                             //Проверить что иконка с глазом видна
          cy.get('.auth__input-icon').click({ force: true });                                          //Нажать на иконку с глазом
